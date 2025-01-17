@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\projectriemann\\unrealengine\\riemannprojection\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\riemannprojection\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\projectriemann\\unrealengine\\riemannprojection\\intermediate\\build\\win64\\x64\\riemannprojectioneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\projectriemann\\unrealengine\\riemannprojection\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\riemannprojection\\definitions.riemannprojection.h",
+            "d:\\epic games\\ue_5.5\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

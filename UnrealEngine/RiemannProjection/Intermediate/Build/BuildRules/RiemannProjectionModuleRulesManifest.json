@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\ProjectRiemann\\UnrealEngine\\RiemannProjection\\Source\\RiemannProjection\\RiemannProjection.Build.cs",
+		"D:\\ProjectRiemann\\UnrealEngine\\RiemannProjection\\Source\\RiemannProjection.Target.cs",
+		"D:\\ProjectRiemann\\UnrealEngine\\RiemannProjection\\Source\\RiemannProjectionEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.1"
+}

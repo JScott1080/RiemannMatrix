@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-RiemannProjection.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\ProjectRiemann\UnrealEngine\RiemannProjection\Intermediate\Build\Win64\x64\RiemannProjectionEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"D:\ProjectRiemann\UnrealEngine\RiemannProjection\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiemannProjection\RiemannProjection.cpp.obj"
+"D:\ProjectRiemann\UnrealEngine\RiemannProjection\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiemannProjection\PerModuleInline.gen.cpp.obj"
+"D:\ProjectRiemann\UnrealEngine\RiemannProjection\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiemannProjection\Default.rc2.res"
+/OUT:"D:\ProjectRiemann\UnrealEngine\RiemannProjection\Intermediate\Build\Win64\x64\UnrealEditor\Development\RiemannProjection\UnrealEditor-RiemannProjection.lib"

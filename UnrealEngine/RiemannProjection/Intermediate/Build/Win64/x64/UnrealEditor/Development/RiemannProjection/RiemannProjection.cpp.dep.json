@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\projectriemann\\unrealengine\\riemannprojection\\source\\riemannprojection\\riemannprojection.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\projectriemann\\unrealengine\\riemannprojection\\intermediate\\build\\win64\\x64\\riemannprojectioneditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\projectriemann\\unrealengine\\riemannprojection\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\riemannprojection\\definitions.riemannprojection.h",
+            "d:\\projectriemann\\unrealengine\\riemannprojection\\source\\riemannprojection\\riemannprojection.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

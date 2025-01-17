@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "RiemannProjection",
+			"Path": "..\\Source\\RiemannProjection.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "RiemannProjectionEditor",
+			"Path": "..\\Source\\RiemannProjectionEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
