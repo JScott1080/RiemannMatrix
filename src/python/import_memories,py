@@ -1,0 +1,14 @@
+import os
+import shutil
+
+def import_memories(src_path):
+    dest_dir = 'data/memories/'
+    files = os.listdir(src_path)
+    for file in files:
+        if file.endswith('.db'):
+            shutil.copy(os.path.join(src_path, file), dest_dir)
+            print(f'Imported {file} to {dest_dir}')
+
+if __name__ == "__main__":
+    src_path = '/path/to/source/'  # Replace with the actual source path
+    import_memories(src_path)
