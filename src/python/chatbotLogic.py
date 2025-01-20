@@ -6,7 +6,7 @@ import whisper
 import json
 import sqlite3
 from __init__ import CURRENT_PERSONA, PERSONAS, save_memory, load_memories
-from memory_management import retrieve_relevant_memories
+from memory_managment import retrieve_relevant_memories
 from personality import load_personality
 
 # Initialize TTS model

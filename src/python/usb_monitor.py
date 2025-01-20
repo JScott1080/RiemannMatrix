@@ -4,7 +4,6 @@ import pyudev
 import os
 import subprocess
 import time
-from __init__ import switch_persona
 
 # Function to switch persona
 def switch_persona(persona):

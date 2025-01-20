@@ -2,10 +2,11 @@
 numpy
 pandas
 scipy
-sklearn
+scikit-learn
 
 # Voice recognition and speech processing
 speechrecognition
+#sudo apt-get install portaudio19-dev first
 pyaudio
 
 # Text-to-Speech (TTS) and Speech-to-Text (STT)
@@ -20,6 +21,7 @@ aiohttp
 pyudev
 
 # Database management
+#sudo apt install libsqlite3-dev
 sqlite3
 
 # Additional libraries

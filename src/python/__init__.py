@@ -39,5 +39,3 @@ def load_memories(persona):
 
 # Global variables
 CURRENT_PERSONA = None  # No persona at startup
-
-TRAINING_CHAT = os  # Replace with your training channel name
