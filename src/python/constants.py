@@ -7,7 +7,7 @@ PERSONAS_JSON_PATH = 'config/personas.json'
 MEMORY_DB_PATH_TEMPLATE = 'data/memories/{}_memory.db'
 
 # Default Settings
-DEFAULT_PERSONA = 'AMY'
+DEFAULT_PERSONA = 'FLC'
 DEFAULT_VOICE_MODEL = 'tts_models/en/lj/ljspeech-glow-tts'
 DEFAULT_VOCODER = 'vocoder_models/en/ljspeech/hifigan_v2'
 
@@ -26,3 +26,8 @@ CHAT_HISTORY_LIMIT = 100
 # Timeouts and Intervals
 REQUEST_TIMEOUT = 5  # in seconds
 MESSAGE_POLL_INTERVAL = 2  # in seconds
+
+TRAINING_CHAT = ''
+if not TRAINING_CHAT:
+    TRAINING_CHAT = '1330598048300007539'
+    print('Training chat not set. Using default value:', TRAINING_CHAT)

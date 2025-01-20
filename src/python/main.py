@@ -4,7 +4,7 @@ import time
 import subprocess
 from voice_command import listen_for_command
 from usb_monitor import monitor_usb_events, check_usb_for_persona
-from discord_bot import run_discord_bot
+from python.Discord.discord_bot import run_discord_bot
 from chatbotLogic import run_chatbot_logic, switch_persona, initialize_llama
 from __init__ import CURRENT_PERSONA, PERSONAS
 

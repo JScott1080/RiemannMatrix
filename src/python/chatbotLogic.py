@@ -1,9 +1,13 @@
+# src/python/chatbotLogic.py
+
 from llama import LLaMA
 from TTS.api import TTS
 import whisper
 import json
 import sqlite3
 from __init__ import CURRENT_PERSONA, PERSONAS, save_memory, load_memories
+from memory_management import retrieve_relevant_memories
+from personality import load_personality
 
 # Initialize TTS model
 tts = TTS(model_name="tts_models/en/ljspeech-glow-tts", vocoder_name="vocoder_models/en/ljspeech/hifigan_v2")
@@ -29,20 +33,36 @@ def transcribe_speech(audio_input):
     result = stt_model.transcribe(audio_input)
     return result['text']
 
-# Function to get response from LLaMA
+# Function to load long-term memories and personality into context
+def initialize_context(persona):
+    long_term_memories = retrieve_relevant_memories(persona, "")
+    personality = load_personality(persona)
+    return long_term_memories, personality
+
+# Initialize context for the current persona
+long_term_memories, personality = initialize_context(CURRENT_PERSONA)
+
+# Function to get response from LLaMA with short-term memories and personality
 def get_response(input_text, persona=CURRENT_PERSONA):
     if persona is None:
         return "I'm currently inactive. Please load a persona to continue."
+
+    # Short-term memory for immediate context
+    short_term_memories = retrieve_relevant_memories(persona, input_text)
+
+    # Prepare LLaMA input with context
+    context = f"Long-Term Memories: {long_term_memories}. Short-Term Memories: {short_term_memories}. Personality: {personality.get('response_style', '{}')}. User: {input_text}"
+    response = llama_model.generate(context)
     
-    response = llama_model.generate(input_text)
     save_memory(persona, input_text, response)
     return response
 
-# Function to switch persona
+# Function to switch persona and update context
 def switch_persona(new_persona):
-    global CURRENT_PERSONA
+    global CURRENT_PERSONA, long_term_memories, personality
     if new_persona in PERSONAS:
         CURRENT_PERSONA = new_persona
+        long_term_memories, personality = initialize_context(new_persona)
         print(f"Switched to persona: {CURRENT_PERSONA}")
     else:
         print(f"Persona {new_persona} not found.")
