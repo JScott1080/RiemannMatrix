@@ -1,7 +1,7 @@
 import os
 import sys
 
-from python.constants import LLAMA_PATH, OLLAMA_PATH
+from constants import LLAMA_PATH, OLLAMA_PATH
 import whisper
 import json
 import sqlite3
