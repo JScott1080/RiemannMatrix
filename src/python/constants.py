@@ -6,6 +6,10 @@ GOOGLE_API_KEY = 'your-google-api-key'
 PERSONAS_JSON_PATH = 'config/personas.json'
 MEMORY_DB_PATH_TEMPLATE = 'data/memories/{}_memory.db'
 
+#Path names
+OLLAMA_PATH = '/usr/share/ollama/.ollama'
+LLAMA_PATH = '/usr/share/ollama/.ollama/models/manifests/registry.ollama.ai/library/llama3.3'
+
 # Default Settings
 DEFAULT_PERSONA = 'FLC'
 DEFAULT_VOICE_MODEL = 'tts_models/en/lj/ljspeech-glow-tts'

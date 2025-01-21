@@ -1,13 +1,20 @@
-# src/python/chatbotLogic.py
-
-from llama import LLaMA
+import os
+import sys
 from TTS.api import TTS
+from python.constants import LLAMA_PATH, OLLAMA_PATH
 import whisper
 import json
 import sqlite3
 from __init__ import CURRENT_PERSONA, PERSONAS, save_memory, load_memories
 from memory_managment import retrieve_relevant_memories
 from personality import load_personality
+
+# Add Ollama and LLaMA paths to sys.path
+sys.path.append(OLLAMA_PATH)
+sys.path.append(LLAMA_PATH)
+
+# Import LLaMA after setting the path
+from llama import LLaMA
 
 # Initialize TTS model
 tts = TTS(model_name="tts_models/en/ljspeech-glow-tts", vocoder_name="vocoder_models/en/ljspeech/hifigan_v2")
