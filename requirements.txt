@@ -5,9 +5,10 @@ scipy
 scikit-learn
 
 # Voice recognition and speech processing
-speechrecognition
+speechrecognition==3.8.1
 #sudo apt-get install portaudio19-dev first
 pyaudio
+pocketsphinx
 
 # Text-to-Speech (TTS) and Speech-to-Text (STT)
 coqui
