@@ -1,6 +1,6 @@
 import os
 import sys
-from TTS.api import TTS
+
 from python.constants import LLAMA_PATH, OLLAMA_PATH
 import whisper
 import json
@@ -15,6 +15,10 @@ sys.path.append(LLAMA_PATH)
 
 # Import LLaMA after setting the path
 from llama import LLaMA
+
+# Import TTS and STT models
+sys.path.append("/mnt/c/Windows/Speech/Engines/TTS")
+from TTS.api import TTS
 
 # Initialize TTS model
 tts = TTS(model_name="tts_models/en/ljspeech-glow-tts", vocoder_name="vocoder_models/en/ljspeech/hifigan_v2")
