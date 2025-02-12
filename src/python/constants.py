@@ -1,3 +1,5 @@
+import os
+
 # API Tokens and Keys
 DISCORD_BOT_TOKEN = 'MTMzMDIzMTU1ODAzMjA2NDU5Mw.GKOOZl.Ta7PVh2CUD0iPcTnNP_ZV2bXkwurk1V-1fb7z0'
 GOOGLE_API_KEY = 'your-google-api-key'
@@ -5,10 +7,7 @@ GOOGLE_API_KEY = 'your-google-api-key'
 # File Paths
 PERSONAS_JSON_PATH = 'config/personas.json'
 MEMORY_DB_PATH_TEMPLATE = 'data/memories/{}_memory.db'
-
-#Path names
-OLLAMA_PATH = '/usr/share/ollama/.ollama'
-LLAMA_PATH = '/usr/share/ollama/.ollama/models/manifests/registry.ollama.ai/library/llama3.3'
+LOG_FILE_PATH = 'data/logs/chatbot.log'
 
 # Default Settings
 DEFAULT_PERSONA = 'FLC'
@@ -35,3 +34,24 @@ TRAINING_CHAT = ''
 if not TRAINING_CHAT:
     TRAINING_CHAT = '1330598048300007539'
     print('Training chat not set. Using default value:', TRAINING_CHAT)
+
+# Base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Directory paths
+CONFIG_DIR = os.path.join(BASE_DIR, 'config')
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+MEMORIES_DIR = os.path.join(DATA_DIR, 'memories')
+LOGS_DIR = os.path.join(DATA_DIR, 'logs')
+MODELS_DIR = os.path.join(BASE_DIR, 'models')
+LLM_MODEL_DIR = os.path.join(MODELS_DIR, 'llm_model')
+TTS_MODEL_DIR = os.path.join(MODELS_DIR, 'tts_model')
+TRAINED_VOICE_MODELS_DIR = os.path.join(MODELS_DIR, 'trained_voice_models')
+SRC_DIR = os.path.join(BASE_DIR, 'src')
+PYTHON_DIR = os.path.join(SRC_DIR, 'python')
+TEMPLATES_DIR = os.path.join(PYTHON_DIR, 'web_server', 'templates')
+STATIC_DIR = os.path.join(PYTHON_DIR, 'web_server', 'static')
+
+# Other constants
+API_URL = 'http://localhost:5000/api'
+WEBSOCKET_URL = 'ws://localhost:8000'

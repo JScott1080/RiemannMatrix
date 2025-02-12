@@ -1,38 +1,20 @@
-# General Python packages
-numpy
-pandas
-scipy
-scikit-learn
-
-# Voice recognition and speech processing
-speechrecognition==3.8.1
-#sudo apt-get install portaudio19-dev first
+transformers
+torch
+SpeechRecognition
 pyaudio
-pocketsphinx
-
-# Text-to-Speech (TTS) and Speech-to-Text (STT)
-coqui
 whisper
-
-# Discord bot
+git+https://github.com/coqui-ai/TTS.git
+librosa
+numpy
+scipy
+llama.cpp
+pyusb
 discord.py
-aiohttp
-
-# USB event monitoring
-pyudev
-
-# Database management
-#sudo apt install libsqlite3-dev
 sqlite3
-
-# Additional libraries
+pickle
+websockets
+aiohttp
 requests
 flask
-
-# Specific for TTS model training
-torch
-torchaudio
-
-# LLaMA library with Ollama
-llamapy
-ollama
+pandas
+matplotlib

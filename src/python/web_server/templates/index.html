@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handler Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Handler Interface</h1>
+    <div>
+        <h2>Push Passive Prompt</h2>
+        <form id="push_prompt_form">
+            <input type="text" id="prompt" placeholder="Enter prompt">
+            <button type="button" onclick="pushPrompt()">Push Prompt</button>
+        </form>
+    </div>
+    <div>
+        <h2>Abort Response</h2>
+        <button type="button" onclick="abortResponse()">Abort Response</button>
+    </div>
+    <div>
+        <h2>Update Universal Filter</h2>
+        <form id="update_filter_form">
+            <input type="text" id="aborted_prompt" placeholder="Enter aborted prompt">
+            <button type="button" onclick="updateFilter()">Update Filter</button>
+        </form>
+    </div>
+
+    <script>
+        function pushPrompt() {
+            const prompt = document.getElementById('prompt').value;
+            fetch('/push_prompt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'prompt=' + encodeURIComponent(prompt),
+            }).then(response => response.json())
+              .then(data => alert(data.status));
+        }
+
+        function abortResponse() {
+            fetch('/abort_response', {
+                method: 'POST',
+            }).then(response => response.json())
+              .then(data => alert(data.status));
+        }
+
+        function updateFilter() {
+            const abortedPrompt = document.getElementById('aborted_prompt').value;
+            fetch('/update_filter', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'aborted_prompt=' + encodeURIComponent(abortedPrompt),
+            }).then(response => response.json())
+              .then(data => alert(data.status));
+        }
+    </script>
+</body>
+</html>
