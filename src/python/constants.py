@@ -1,7 +1,7 @@
 import os
 
 # API Tokens and Keys
-DISCORD_BOT_TOKEN = 'MTMzMDIzMTU1ODAzMjA2NDU5Mw.GKOOZl.Ta7PVh2CUD0iPcTnNP_ZV2bXkwurk1V-1fb7z0'
+DISCORD_BOT_TOKEN = 'ENTER_TOKEN_HERE'
 GOOGLE_API_KEY = 'your-google-api-key'
 
 # File Paths
@@ -32,7 +32,7 @@ MESSAGE_POLL_INTERVAL = 2  # in seconds
 
 TRAINING_CHAT = ''
 if not TRAINING_CHAT:
-    TRAINING_CHAT = '1330598048300007539'
+    TRAINING_CHAT = 'ENTER_CHAT_CHANNEL_ID_HERE'
     print('Training chat not set. Using default value:', TRAINING_CHAT)
 
 # Base directory
